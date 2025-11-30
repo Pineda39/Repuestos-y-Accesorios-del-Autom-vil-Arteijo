@@ -1,0 +1,61 @@
+:root {
+  --accent-color: #CA6702;
+  --accent2-color: #F4A261;
+  --accent3-color: #EE9B00;
+  --accent4-color: #94D2BD;
+  --primary-color: #005F73;
+  --dark-text-color: #001219;
+  --gray-text-color: #8E8D8A;
+  --button-padding-x: 12px;
+  --button-padding-y: 8px;
+  --font-family-body: 'Poppins', sans-serif;
+  --light-text-color: #FAF3E0;
+  --dark-border-color: #323C4E;
+  --light-border-color: #C2CAD6;
+  --font-family-heading: 'Abel', sans-serif;
+  --button-rounded-radius: 6px;
+  --dark-background-color: #001219;
+  --light-background-color: #AFF1F9;
+  --medium-background-color: #8EC5CC;
+  --primary-button-text-color: #FFFFFF;
+  --secondary-button-bg-color: #94D2BD;
+  --secondary-button-text-color: #005F73;
+  --primary-button-hover-bg-color: #0A9396;
+  --primary-button-hover-text-color: #FFFFFF;
+  --secondary-button-hover-bg-color: #E9D8A6;
+  --secondary-button-hover-text-color: #5D4C46;
+}
+
+/* Small helpers used in the original preview */
+.hovered-element { outline: #3871E0 dashed 2px; }
+.clicked-element { outline: #3871E0 solid 2px; }
+.clicked-code-section { border: #3B82F6 solid 2px; }
+
+/* Basic page defaults */
+html, body { height: 100%; }
+body { font-family: var(--font-family-body); background: white; color: var(--dark-text-color); }
+
+/* Ensure images don't overflow their containers */
+img { max-width: 100%; height: auto; display: block; }
+
+/* Small utility for rounded shadows used in preview */
+.rounded-2xl { border-radius: 1rem; }
+
+/* Improve form controls appearance (light styling in case Tailwind isn't loaded) */
+input, textarea, button {
+  font-family: var(--font-family-body);
+}
+
+/* Provide a simple responsive container width similar to tailwind's px-4 */
+.w-full { width: 100%; }
+.px-4 { padding-left: 1rem; padding-right: 1rem; }
+.py-16 { padding-top: 4rem; padding-bottom: 4rem; }
+
+/* Accessibility: focus states fallback */
+button:focus, a:focus, input:focus, textarea:focus { outline: 3px solid rgba(10, 148, 150, 0.15); outline-offset: 2px; }
+
+/* Small responsive helpers used by the markup (non exhaustive) */
+@media (min-width: 1024px) {
+  .lg\:flex { display: flex; }
+  .lg\:py-24 { padding-top: 6rem; padding-bottom: 6rem; }
+}
